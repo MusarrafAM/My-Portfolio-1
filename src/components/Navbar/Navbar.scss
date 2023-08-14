@@ -21,13 +21,19 @@
     align-items: center;
   
     img {
+      margin-left: 20px;
       width: 140px;
-      height: 20px;
+      height: 25px;
   
       @media screen and (min-width: 2000px) {
         width: 180px;
         height: 40px;
+        
       }
+      @media screen and (max-width: 900px) {
+        margin-left: 0;
+      }
+
     }
   }
 
@@ -174,5 +180,5 @@
 
 
 .app__navbar-links{
-  margin-right: 100px;
+  margin-right: 150px;
 }

@@ -18,3 +18,17 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+/* To change the gragg text colour */
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background-color: teal;
+}
+
+::selection {
+  color: white;
+  /* background-color: teal; */
+  background-color: #614BC3;
+}
+
