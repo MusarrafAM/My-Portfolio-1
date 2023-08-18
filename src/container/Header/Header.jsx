@@ -16,6 +16,9 @@ const scaleVariants = {
   },
 };
 
+const isMobile = window.innerWidth <= 900; // Adjust the breakpoint as needed
+
+
 const Header = () => {
   const parentRef = useRef();
   return (
@@ -88,7 +91,7 @@ const Header = () => {
               repeat: Infinity, // Repeat the animation infinitely
             }}
             //!Below is for Dragg Animation
-            drag
+            drag={isMobile ? false : true}
             whileDrag={{ scale: 1.2, rotate: 20 }}
             dragConstraints={parentRef}
             // dragElastic= {0}

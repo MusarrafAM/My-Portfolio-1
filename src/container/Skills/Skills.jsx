@@ -11,6 +11,8 @@ const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
 
+  const isMobile = window.innerWidth <= 900; // Adjust the breakpoint as needed
+
   useEffect(() => {
     const query = '*[_type == "experiences"]';
     const skillsQuery = '*[_type == "skills"]';
@@ -56,7 +58,7 @@ const Skills = () => {
               className="app__skills-item app__flex"
               key={skill.name}
               //!Spring Animation
-              drag
+              drag={isMobile ? false : true}
               // whileDrag={{ scale: 1.2, rotate: 20 }}
               dragConstraints={parentSkillsRef}
               // dragElastic= {0}
